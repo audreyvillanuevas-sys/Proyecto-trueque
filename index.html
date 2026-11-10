@@ -1,0 +1,553 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="TRUEQUE: plataforma comunitaria de donaciones e intercambios en Cercado de Lima.">
+
+    <title>TRUEQUE | Comparte, dona e intercambia</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+
+        <a href="#inicio" class="logo">
+            TRUEQUE<span>.</span>
+        </a>
+
+        <nav class="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#categorias">Categorías</a>
+            <a href="#productos">Explorar</a>
+            <a href="#publicar">Publicar</a>
+            <a href="#cuenta">Mi cuenta</a>
+        </nav>
+
+        <a href="#publicar" class="boton-menu">
+            Publicar producto
+        </a>
+
+    </header>
+
+
+    <main>
+
+        <!-- PORTADA PRINCIPAL -->
+        <section id="inicio" class="portada">
+
+            <div class="portada-contenido">
+
+                <span class="etiqueta-portada">
+                    <span class="punto-verde"></span>
+                    COMUNIDAD DE CERCADO DE LIMA
+                </span>
+
+                <h1>
+                    Lo que ya no necesitas,
+                    <span>puede cambiar otra vida.</span>
+                </h1>
+
+                <p>
+                    Comparte, dona e intercambia objetos con personas
+                    de tu comunidad. Pequeñas acciones pueden generar
+                    grandes cambios.
+                </p>
+
+                <div class="portada-botones">
+
+                    <a href="#productos" class="boton-principal">
+                        Explorar productos
+                        <span>→</span>
+                    </a>
+
+                    <a href="#publicar" class="boton-transparente">
+                        Quiero compartir
+                    </a>
+
+                </div>
+
+                <div class="portada-dato">
+                    <span>♻</span>
+                    <p>Dar una segunda oportunidad también es cuidar nuestro planeta.</p>
+                </div>
+
+            </div>
+
+            <div class="portada-imagen">
+
+                <div class="tarjeta-flotante">
+                    <span class="icono-flotante">💚</span>
+                    <div>
+                        <strong>Compartir nos une</strong>
+                        <small>Una comunidad más solidaria</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- BENEFICIOS -->
+        <section class="beneficios">
+
+            <article>
+                <span>♻</span>
+                <div>
+                    <h3>Reutiliza</h3>
+                    <p>Da una segunda vida a los objetos.</p>
+                </div>
+            </article>
+
+            <article>
+                <span>🤝</span>
+                <div>
+                    <h3>Comparte</h3>
+                    <p>Ayuda a otras personas de tu comunidad.</p>
+                </div>
+            </article>
+
+            <article>
+                <span>🌱</span>
+                <div>
+                    <h3>Transforma</h3>
+                    <p>Promueve un consumo responsable.</p>
+                </div>
+            </article>
+
+        </section>
+
+
+        <!-- CATEGORÍAS -->
+        <section id="categorias" class="seccion">
+
+            <div class="encabezado-seccion">
+                <div>
+                    <span class="subtitulo">DESCUBRE TRUEQUE</span>
+                    <h2>Explora nuestras categorías</h2>
+                    <p>Encuentra algo que necesitas o comparte algo que pueda ayudar.</p>
+                </div>
+            </div>
+
+            <div class="categorias-grid">
+
+                <article class="tarjeta-categoria">
+                    <img src="img/ropa.jpg"
+                        alt="Ropa para donar o intercambiar"
+                        loading="lazy">
+
+                    <div class="contenido-categoria">
+                        <span>01</span>
+                        <h3>Ropa</h3>
+                        <p>Prendas y accesorios en buen estado.</p>
+                    </div>
+                </article>
+
+                <article class="tarjeta-categoria">
+                    <img src="img/libros.jpg"
+                        alt="Libros para compartir"
+                        loading="lazy">
+
+                    <div class="contenido-categoria">
+                        <span>02</span>
+                        <h3>Libros</h3>
+                        <p>Conocimiento que merece compartirse.</p>
+                    </div>
+                </article>
+
+                <article class="tarjeta-categoria">
+                    <img src="img/alimentos.jpg"
+                        alt="Alimentos y productos para compartir"
+                        loading="lazy">
+
+                    <div class="contenido-categoria">
+                        <span>03</span>
+                        <h3>Alimentos</h3>
+                        <p>Productos cerrados y no perecibles.</p>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRODUCTOS Y FILTROS -->
+        <section id="productos" class="seccion seccion-productos">
+
+            <div class="encabezado-seccion">
+                <div>
+                    <span class="subtitulo">OPORTUNIDADES PARA COMPARTIR</span>
+                    <h2>Productos disponibles</h2>
+                    <p>Descubre lo que la comunidad tiene para ofrecer.</p>
+                </div>
+            </div>
+
+            <!-- BÚSQUEDA Y FILTROS -->
+            <div class="filtros-productos">
+
+                <div class="grupo-campo">
+                    <label for="buscar-producto">Buscar producto</label>
+                    <input
+                        type="search"
+                        id="buscar-producto"
+                        placeholder="Escribe el nombre del producto...">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="filtro-categoria">Categoría</label>
+                    <select id="filtro-categoria">
+                        <option value="">Todas las categorías</option>
+                        <option value="ropa">Ropa</option>
+                        <option value="libros">Libros</option>
+                        <option value="alimentos">Alimentos</option>
+                    </select>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="filtro-tipo">Tipo</label>
+                    <select id="filtro-tipo">
+                        <option value="">Donaciones e intercambios</option>
+                        <option value="donacion">Donación</option>
+                        <option value="intercambio">Intercambio</option>
+                    </select>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="filtro-estado">Disponibilidad</label>
+                    <select id="filtro-estado">
+                        <option value="disponible">Disponibles</option>
+                        <option value="">Todos los estados</option>
+                        <option value="reservado">Reservados</option>
+                        <option value="entregado">Entregados</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div id="contenedor-productos" class="productos-grid">
+                <!-- JavaScript insertará aquí las publicaciones -->
+            </div>
+
+            <p id="mensaje-productos" class="mensaje-vacio" aria-live="polite"></p>
+
+        </section>
+
+
+        <!-- LLAMADO A LA ACCIÓN -->
+        <section class="franja-solidaria">
+
+            <div>
+                <span>UNA COMUNIDAD, MUCHAS OPORTUNIDADES</span>
+                <h2>Lo que compartes puede hacer la diferencia.</h2>
+                <p>Publica algo que ya no necesitas y permite que alguien más lo aproveche.</p>
+            </div>
+
+            <a href="#publicar" class="boton-claro">
+                Compartir un producto →
+            </a>
+
+        </section>
+
+
+        <!-- CUENTA: REGISTRO E INICIO DE SESIÓN -->
+        <section id="cuenta" class="seccion seccion-cuenta">
+
+            <div class="encabezado-seccion">
+                <div>
+                    <span class="subtitulo">FORMA PARTE DE TRUEQUE</span>
+                    <h2>Tu cuenta</h2>
+                    <p>Regístrate o inicia sesión para publicar y contactar con la comunidad.</p>
+                </div>
+            </div>
+
+            <div id="panel-acceso" class="panel-cuenta">
+
+                <!-- REGISTRO -->
+                <form id="formulario-registro" class="formulario-cuenta">
+
+                    <h3>Crear una cuenta</h3>
+
+                    <div class="grupo-campo">
+                        <label for="registro-nombre">Nombre completo</label>
+                        <input
+                            type="text"
+                            id="registro-nombre"
+                            maxlength="60"
+                            autocomplete="name"
+                            required>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="registro-email">Correo electrónico</label>
+                        <input
+                            type="email"
+                            id="registro-email"
+                            autocomplete="email"
+                            required>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="registro-password">Contraseña</label>
+                        <input
+                            type="password"
+                            id="registro-password"
+                            minlength="6"
+                            autocomplete="new-password"
+                            required>
+                    </div>
+
+                    <button type="submit" class="boton-principal">
+                        Registrarme
+                    </button>
+
+                    <p id="mensaje-registro" role="status"></p>
+
+                </form>
+
+
+                <!-- INICIO DE SESIÓN -->
+                <form id="formulario-login" class="formulario-cuenta">
+
+                    <h3>Iniciar sesión</h3>
+
+                    <div class="grupo-campo">
+                        <label for="login-email">Correo electrónico</label>
+                        <input
+                            type="email"
+                            id="login-email"
+                            autocomplete="email"
+                            required>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="login-password">Contraseña</label>
+                        <input
+                            type="password"
+                            id="login-password"
+                            autocomplete="current-password"
+                            required>
+                    </div>
+
+                    <button type="submit" class="boton-principal">
+                        Iniciar sesión
+                    </button>
+
+                    <p id="mensaje-login" role="status"></p>
+
+                </form>
+
+            </div>
+
+
+            <!-- PERFIL DEL USUARIO CON SESIÓN INICIADA -->
+            <div id="panel-perfil" class="panel-perfil" hidden>
+
+                <h3>¡Bienvenido/a!</h3>
+
+                <p id="perfil-nombre"></p>
+                <p id="perfil-email"></p>
+
+                <button type="button" id="cerrar-sesion" class="boton-secundario">
+                    Cerrar sesión
+                </button>
+
+                <h3>Mis publicaciones</h3>
+
+                <div id="mis-productos" class="productos-grid">
+                    <!-- JavaScript mostrará aquí las publicaciones del usuario -->
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOLICITUDES DE LOS USUARIOS -->
+        <section id="solicitudes" class="seccion seccion-solicitudes">
+
+            <div class="encabezado-seccion">
+                <div>
+                    <span class="subtitulo">CONECTANDO A LA COMUNIDAD</span>
+                    <h2>Mis solicitudes</h2>
+                    <p>Revisa las solicitudes que enviaste y las que recibiste.</p>
+                </div>
+            </div>
+
+            <div id="contenedor-solicitudes" class="contenedor-solicitudes">
+                <p class="mensaje-vacio">
+                    Inicia sesión para consultar tus solicitudes.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- FORMULARIO DE PUBLICACIÓN -->
+        <section id="publicar" class="seccion seccion-publicar">
+
+            <div class="encabezado-seccion">
+                <div>
+                    <span class="subtitulo">FORMA PARTE DEL CAMBIO</span>
+                    <h2 id="titulo-formulario-publicacion">Publica tu producto</h2>
+                    <p>Completa los datos y comparte con tu comunidad.</p>
+                </div>
+            </div>
+
+            <form id="formulario-publicacion" class="formulario-publicacion">
+
+                <div class="grupo-campo campo-completo">
+                    <label for="nombre">Nombre del producto</label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        placeholder="Ej. Casaca de invierno"
+                        maxlength="70"
+                        required>
+                </div>
+
+
+                <div class="grupo-campo">
+                    <label for="categoria">Categoría</label>
+
+                    <select id="categoria" required>
+                        <option value="">Selecciona una categoría</option>
+                        <option value="ropa">Ropa</option>
+                        <option value="libros">Libros</option>
+                        <option value="alimentos">Alimentos</option>
+                    </select>
+                </div>
+
+
+                <div class="grupo-campo">
+                    <label for="tipo">Tipo de publicación</label>
+
+                    <select id="tipo" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="donacion">Donación</option>
+                        <option value="intercambio">Intercambio</option>
+                    </select>
+                </div>
+
+
+                <div class="grupo-campo campo-completo">
+                    <label for="descripcion">Descripción</label>
+
+                    <textarea
+                        id="descripcion"
+                        rows="5"
+                        maxlength="400"
+                        placeholder="Describe el estado y las características del producto..."
+                        required></textarea>
+                </div>
+
+
+                <!-- FOTOGRAFÍA DEL PRODUCTO -->
+                <div class="grupo-campo campo-completo">
+                    <label for="imagen-producto">Fotografía del producto</label>
+
+                    <input
+                        type="file"
+                        id="imagen-producto"
+                        accept="image/jpeg,image/png,image/webp">
+
+                    <small>Formatos permitidos: JPG, PNG o WEBP. Tamaño máximo: 700 KB.</small>
+
+                    <div id="vista-previa-imagen" class="vista-previa-imagen" hidden>
+                        <img id="imagen-seleccionada" src="" alt="Vista previa del producto">
+                    </div>
+                </div>
+
+
+                <!-- ESTADO INICIAL -->
+                <div class="grupo-campo">
+                    <label for="estado-producto">Estado del producto</label>
+
+                    <select id="estado-producto" required>
+                        <option value="disponible">Disponible</option>
+                    </select>
+                </div>
+
+
+                <div class="acciones-formulario campo-completo">
+
+                    <button type="submit" id="boton-publicar" class="boton-principal boton-enviar">
+                        Publicar producto →
+                    </button>
+
+                    <button type="button" id="cancelar-edicion" class="boton-secundario" hidden>
+                        Cancelar edición
+                    </button>
+
+                </div>
+
+                <p id="mensaje-publicacion" class="mensaje-formulario campo-completo" role="status"></p>
+
+            </form>
+
+            <p class="nota-alimentos">
+                <strong>Importante:</strong> los alimentos publicados deben estar cerrados,
+                no ser perecibles y encontrarse dentro de su fecha de vencimiento.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer id="contacto" class="pie-pagina">
+
+        <div class="pie-contenido">
+
+            <div>
+                <a href="#inicio" class="logo logo-pie">
+                    TRUEQUE<span>.</span>
+                </a>
+
+                <p>Compartir, donar e intercambiar.<br>
+                    Una comunidad más solidaria.</p>
+            </div>
+
+            <div>
+                <h3>Explora</h3>
+                <a href="#categorias">Categorías</a>
+                <a href="#productos">Productos</a>
+                <a href="#publicar">Publicar</a>
+            </div>
+
+            <div>
+                <h3>Nuestra comunidad</h3>
+                <p>Cercado de Lima, Perú</p>
+                <p>Proyecto académico</p>
+            </div>
+
+        </div>
+
+        <div class="pie-final">
+            © <span id="anio"></span> TRUEQUE. Proyecto académico.
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
+

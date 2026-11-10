@@ -1,0 +1,1218 @@
+
+
+/* =========================================
+   1. CONFIGURACIÓN GENERAL
+========================================= */
+
+:root {
+    --azul: #183b43;
+    --azul-oscuro: #102d34;
+    --verde: #159b83;
+    --verde-claro: #e5f5ef;
+    --coral: #ef806b;
+    --crema: #faf9f5;
+    --blanco: #ffffff;
+    --gris: #697b7d;
+    --borde: #e8eeeb;
+    --sombra: 0 10px 30px rgba(24, 59, 67, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    margin: 0;
+    background: var(--crema);
+    color: var(--azul);
+    font-family: "DM Sans", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* =========================================
+   2. ENCABEZADO Y MENÚ
+========================================= */
+
+.encabezado {
+    width: 100%;
+    min-height: 85px;
+    padding: 18px 7%;
+    background: var(--blanco);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 15px rgba(16, 45, 52, 0.05);
+}
+
+.logo {
+    color: var(--azul);
+    font-family: "Manrope", sans-serif;
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--verde);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: var(--azul);
+    font-size: 14px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--verde);
+}
+
+.boton-menu {
+    background: var(--verde);
+    color: var(--blanco);
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.boton-menu:hover {
+    background: var(--azul);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   3. PORTADA PRINCIPAL
+========================================= */
+
+.portada {
+    min-height: 580px;
+    padding: 75px 8%;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 50px;
+    background: var(--crema);
+}
+
+.portada-contenido {
+    max-width: 600px;
+}
+
+.etiqueta-portada {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 9px 15px;
+    border-radius: 30px;
+    background: var(--verde-claro);
+    color: var(--verde);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.punto-verde {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--verde);
+}
+
+.portada h1 {
+    margin: 25px 0;
+    color: var(--azul);
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.12;
+    letter-spacing: -2px;
+}
+
+.portada h1 span {
+    color: var(--verde);
+}
+
+.portada-contenido > p {
+    max-width: 510px;
+    color: var(--gris);
+    font-size: 17px;
+}
+
+.portada-botones {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.boton-principal {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 23px;
+    border: none;
+    border-radius: 30px;
+    background: var(--verde);
+    color: var(--blanco);
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.boton-principal:hover {
+    background: var(--azul);
+    transform: translateY(-3px);
+}
+
+.boton-transparente {
+    padding: 13px 22px;
+    border: 1px solid var(--borde);
+    border-radius: 30px;
+    color: var(--azul);
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.boton-transparente:hover {
+    border-color: var(--verde);
+    color: var(--verde);
+}
+
+.portada-dato {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 35px;
+}
+
+.portada-dato > span {
+    font-size: 25px;
+}
+
+.portada-dato p {
+    color: var(--gris);
+    font-size: 13px;
+}
+
+.portada-imagen {
+    min-height: 420px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 25px;
+    border-radius: 25px;
+    background-image: url("../img/portada.jpg");
+    background-position: center;
+    background-size: cover;
+    box-shadow: var(--sombra);
+}
+
+.tarjeta-flotante {
+    width: 90%;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 17px;
+    border-radius: 15px;
+    background: var(--blanco);
+    box-shadow: var(--sombra);
+    animation: flotar 3s ease-in-out infinite;
+}
+
+.icono-flotante {
+    font-size: 30px;
+}
+
+.tarjeta-flotante strong,
+.tarjeta-flotante small {
+    display: block;
+}
+
+.tarjeta-flotante small {
+    color: var(--gris);
+}
+
+
+/* =========================================
+   4. BENEFICIOS
+========================================= */
+
+.beneficios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 30px 8%;
+    background: var(--blanco);
+}
+
+.beneficios article {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 15px;
+    border-radius: 15px;
+    transition: 0.3s ease;
+}
+
+.beneficios article:hover {
+    background: var(--verde-claro);
+    transform: translateY(-4px);
+}
+
+.beneficios article > span {
+    font-size: 32px;
+}
+
+.beneficios h3 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.beneficios p {
+    margin: 3px 0 0;
+    color: var(--gris);
+    font-size: 13px;
+}
+
+
+/* =========================================
+   5. SECCIONES GENERALES
+========================================= */
+
+.seccion {
+    padding: 85px 8%;
+}
+
+.encabezado-seccion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.subtitulo {
+    color: var(--verde);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.encabezado-seccion h2 {
+    margin: 10px 0;
+    color: var(--azul);
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(28px, 4vw, 38px);
+    line-height: 1.2;
+}
+
+.encabezado-seccion p {
+    margin: 0;
+    color: var(--gris);
+}
+
+
+/* =========================================
+   6. CATEGORÍAS
+========================================= */
+
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tarjeta-categoria {
+    min-height: 340px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    background: var(--azul);
+    box-shadow: var(--sombra);
+    transition: transform 0.4s ease;
+}
+
+.tarjeta-categoria:hover {
+    transform: translateY(-8px);
+}
+
+.tarjeta-categoria img {
+    width: 100%;
+    height: 340px;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.tarjeta-categoria:hover img {
+    transform: scale(1.06);
+}
+
+.contenido-categoria {
+    position: absolute;
+    inset: auto 0 0;
+    padding: 25px;
+    color: var(--blanco);
+    background: linear-gradient(transparent, rgba(16, 45, 52, 0.95));
+}
+
+.contenido-categoria > span {
+    color: #a9e8d5;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.contenido-categoria h3 {
+    margin: 5px 0;
+    font-size: 24px;
+}
+
+.contenido-categoria p {
+    margin: 0;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   7. PRODUCTOS
+========================================= */
+
+.seccion-productos {
+    background: #f1f6f3;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.tarjeta-producto {
+    overflow: hidden;
+    border: 1px solid var(--borde);
+    border-radius: 17px;
+    background: var(--blanco);
+    box-shadow: 0 5px 20px rgba(24, 59, 67, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra);
+}
+
+.imagen-producto {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: var(--verde-claro);
+}
+
+.imagen-producto img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.informacion-producto {
+    padding: 20px;
+}
+
+.informacion-producto h3 {
+    margin: 12px 0 8px;
+    color: var(--azul);
+    font-size: 19px;
+}
+
+.informacion-producto p {
+    color: var(--gris);
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.categoria-producto {
+    display: inline-block;
+    padding: 5px 11px;
+    border-radius: 20px;
+    background: var(--verde-claro);
+    color: var(--verde);
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.tipo-publicacion {
+    display: inline-block;
+    margin: 10px 5px 10px 0;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #fff0eb;
+    color: #c65d49;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.tipo-publicacion.intercambio {
+    background: #e9efff;
+    color: #4c65a6;
+}
+
+.boton-secundario {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 17px;
+    border: 1px solid var(--verde);
+    border-radius: 25px;
+    background: transparent;
+    color: var(--verde);
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.boton-secundario:hover {
+    background: var(--verde);
+    color: var(--blanco);
+}
+
+.mensaje-vacio {
+    padding: 25px;
+    color: var(--gris);
+    text-align: center;
+}
+
+
+/* =========================================
+   8. NUEVO: BÚSQUEDA Y FILTROS
+========================================= */
+
+.filtros-productos {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding: 22px;
+    border: 1px solid var(--borde);
+    border-radius: 15px;
+    background: var(--blanco);
+    box-shadow: 0 5px 20px rgba(24, 59, 67, 0.04);
+}
+
+
+/* =========================================
+   9. LLAMADO A LA ACCIÓN
+========================================= */
+
+.franja-solidaria {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 65px 8%;
+    padding: 45px;
+    border-radius: 20px;
+    background: var(--azul);
+    color: var(--blanco);
+}
+
+.franja-solidaria > div > span {
+    color: #9ce2ce;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.franja-solidaria h2 {
+    max-width: 600px;
+    margin: 12px 0;
+    font-family: "Manrope", sans-serif;
+    font-size: 30px;
+    line-height: 1.25;
+}
+
+.franja-solidaria p {
+    color: #d0dddc;
+}
+
+.boton-claro {
+    flex-shrink: 0;
+    padding: 14px 22px;
+    border-radius: 30px;
+    background: var(--blanco);
+    color: var(--azul);
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.boton-claro:hover {
+    background: var(--verde-claro);
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   10. FORMULARIOS
+========================================= */
+
+.seccion-publicar {
+    background: var(--blanco);
+}
+
+.formulario-publicacion {
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin: 0 auto;
+    padding: 35px;
+    border: 1px solid var(--borde);
+    border-radius: 18px;
+    background: var(--crema);
+    box-shadow: var(--sombra);
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.grupo-campo label {
+    color: var(--azul);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.grupo-campo input,
+.grupo-campo select,
+.grupo-campo textarea {
+    width: 100%;
+    min-height: 47px;
+    padding: 12px 14px;
+    border: 1px solid var(--borde);
+    border-radius: 9px;
+    outline: none;
+    background: var(--blanco);
+    color: var(--azul);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grupo-campo textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.grupo-campo input:focus,
+.grupo-campo select:focus,
+.grupo-campo textarea:focus {
+    border-color: var(--verde);
+    box-shadow: 0 0 0 3px rgba(21, 155, 131, 0.12);
+}
+
+.grupo-campo small {
+    color: var(--gris);
+    font-size: 12px;
+}
+
+.campo-completo {
+    grid-column: 1 / -1;
+}
+
+.acciones-formulario {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.boton-enviar {
+    justify-self: start;
+}
+
+.mensaje-formulario {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nota-alimentos {
+    max-width: 850px;
+    margin: 20px auto 0;
+    padding: 15px;
+    border-left: 4px solid var(--coral);
+    border-radius: 5px;
+    background: #fff4ef;
+    color: var(--gris);
+    font-size: 13px;
+}
+
+
+/* =========================================
+   11. NUEVO: VISTA PREVIA DE FOTOGRAFÍA
+========================================= */
+
+.vista-previa-imagen {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 12px;
+    overflow: hidden;
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    background: var(--blanco);
+}
+
+.vista-previa-imagen img {
+    width: 100%;
+    max-height: 230px;
+    display: block;
+    object-fit: contain;
+}
+
+
+/* =========================================
+   12. NUEVO: ESTADOS Y ACCIONES DE PRODUCTOS
+========================================= */
+
+.estado-producto {
+    display: inline-block;
+    margin: 8px 5px 8px 0;
+    padding: 6px 11px;
+    border-radius: 20px;
+    background: var(--verde-claro);
+    color: var(--verde);
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.estado-producto.reservado {
+    background: #fff2dc;
+    color: #a66a12;
+}
+
+.estado-producto.entregado {
+    background: #edf0f1;
+    color: #68777a;
+}
+
+.acciones-producto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.boton-editar,
+.boton-eliminar,
+.boton-estado {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.boton-editar {
+    background: #e9efff;
+    color: #4c65a6;
+}
+
+.boton-editar:hover {
+    background: #d8e2ff;
+}
+
+.boton-eliminar {
+    background: #fff0eb;
+    color: #c65d49;
+}
+
+.boton-eliminar:hover {
+    background: #ffe0d6;
+}
+
+.boton-estado {
+    background: var(--verde-claro);
+    color: var(--verde);
+}
+
+.boton-estado:hover {
+    background: #cceee1;
+}
+
+
+/* =========================================
+   13. NUEVO: REGISTRO E INICIO DE SESIÓN
+========================================= */
+
+.seccion-cuenta {
+    background: var(--crema);
+}
+
+.panel-cuenta {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.formulario-cuenta {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 30px;
+    border: 1px solid var(--borde);
+    border-radius: 17px;
+    background: var(--blanco);
+    box-shadow: var(--sombra);
+}
+
+.formulario-cuenta h3 {
+    margin: 0 0 5px;
+    color: var(--azul);
+    font-family: "Manrope", sans-serif;
+    font-size: 22px;
+}
+
+.formulario-cuenta .boton-principal {
+    align-self: flex-start;
+}
+
+#mensaje-registro,
+#mensaje-login {
+    min-height: 20px;
+    margin: 0;
+    color: var(--verde);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   14. NUEVO: PERFIL
+========================================= */
+
+.panel-perfil {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid var(--borde);
+    border-radius: 17px;
+    background: var(--blanco);
+    box-shadow: var(--sombra);
+}
+
+.panel-perfil h3 {
+    color: var(--azul);
+    font-family: "Manrope", sans-serif;
+}
+
+.panel-perfil > p {
+    color: var(--gris);
+}
+
+.panel-perfil .boton-secundario {
+    margin: 10px 0 25px;
+}
+
+#mis-productos {
+    margin-top: 20px;
+}
+
+
+/* =========================================
+   15. NUEVO: SOLICITUDES
+========================================= */
+
+.seccion-solicitudes {
+    background: #f1f6f3;
+}
+
+.contenedor-solicitudes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.tarjeta-solicitud {
+    padding: 22px;
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    background: var(--blanco);
+    box-shadow: 0 5px 20px rgba(24, 59, 67, 0.04);
+}
+
+.tarjeta-solicitud h3 {
+    margin-top: 0;
+    color: var(--azul);
+}
+
+.tarjeta-solicitud p {
+    color: var(--gris);
+    overflow-wrap: anywhere;
+}
+
+.estado-solicitud {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: var(--verde-claro);
+    color: var(--verde);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.estado-solicitud.rechazada {
+    background: #fff0eb;
+    color: #c65d49;
+}
+
+.estado-solicitud.aceptada {
+    background: #e9efff;
+    color: #4c65a6;
+}
+
+.acciones-solicitud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.boton-aceptar,
+.boton-rechazar {
+    padding: 9px 14px;
+    border: none;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.boton-aceptar {
+    background: var(--verde-claro);
+    color: var(--verde);
+}
+
+.boton-rechazar {
+    background: #fff0eb;
+    color: #c65d49;
+}
+
+
+/* =========================================
+   16. PIE DE PÁGINA
+========================================= */
+
+.pie-pagina {
+    padding: 55px 8% 20px;
+    background: var(--azul-oscuro);
+    color: var(--blanco);
+}
+
+.pie-contenido {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 35px;
+}
+
+.logo-pie {
+    display: inline-block;
+    color: var(--blanco);
+}
+
+.pie-contenido p {
+    color: #c2d0cf;
+    font-size: 14px;
+}
+
+.pie-contenido h3 {
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.pie-contenido a:not(.logo) {
+    display: block;
+    margin: 9px 0;
+    color: #c2d0cf;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.pie-contenido a:not(.logo):hover {
+    color: #9ce2ce;
+}
+
+.pie-final {
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    color: #c2d0cf;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+/* =========================================
+   17. ANIMACIONES
+========================================= */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.tarjeta-categoria,
+.beneficios article,
+.franja-solidaria {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.tarjeta-categoria.visible,
+.beneficios article.visible,
+.franja-solidaria.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   18. ELEMENTOS OCULTOS
+========================================= */
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* =========================================
+   19. DISEÑO RESPONSIVE: TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+    .encabezado {
+        padding: 16px 4%;
+        flex-wrap: wrap;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .portada {
+        grid-template-columns: 1fr 0.8fr;
+        padding: 60px 5%;
+        gap: 25px;
+    }
+
+    .beneficios {
+        padding: 25px 5%;
+    }
+
+    .seccion {
+        padding: 65px 5%;
+    }
+
+    .productos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .filtros-productos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .franja-solidaria {
+        margin: 50px 5%;
+    }
+
+}
+
+
+/* =========================================
+   20. DISEÑO RESPONSIVE: CELULARES
+========================================= */
+
+@media (max-width: 650px) {
+
+    html {
+        scroll-padding-top: 150px;
+    }
+
+    .encabezado {
+        position: relative;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .menu {
+        width: 100%;
+        gap: 12px 18px;
+    }
+
+    .menu a {
+        font-size: 13px;
+    }
+
+    .boton-menu {
+        display: none;
+    }
+
+    .portada {
+        grid-template-columns: 1fr;
+        padding: 50px 6%;
+    }
+
+    .portada h1 {
+        font-size: 40px;
+    }
+
+    .portada-imagen {
+        min-height: 300px;
+    }
+
+    .beneficios {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .seccion {
+        padding: 55px 6%;
+    }
+
+    .categorias-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta-categoria,
+    .tarjeta-categoria img {
+        min-height: 300px;
+        height: 300px;
+    }
+
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filtros-productos {
+        grid-template-columns: 1fr;
+        padding: 18px;
+    }
+
+    .franja-solidaria {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 35px 6%;
+        padding: 30px 23px;
+    }
+
+    .franja-solidaria h2 {
+        font-size: 25px;
+    }
+
+    .formulario-publicacion {
+        grid-template-columns: 1fr;
+        padding: 22px;
+    }
+
+    .campo-completo {
+        grid-column: auto;
+    }
+
+    .panel-cuenta {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario-cuenta {
+        padding: 23px;
+    }
+
+    .contenedor-solicitudes {
+        grid-template-columns: 1fr;
+    }
+
+    .pie-contenido {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+}
+
+
+/* =========================================
+   21. RESPETO A LA PREFERENCIA DE MOVIMIENTO
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
